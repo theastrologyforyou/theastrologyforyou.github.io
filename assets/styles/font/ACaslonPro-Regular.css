@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Adobe Caslon Pro';
+    src: url('ACaslonPro-Regular.woff2') format('woff2'),
+        url('ACaslonPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Shows the fallback font that you have set in the CSS until the web font has downloaded. Your website visitors may see a Flash of unstyled text  or FOUT with this option. */
+}
+
+@font-face {
+    font-family: 'Adobe Caslon Pro';
+    src: url('ACaslonPro-Italic.woff2') format('woff2'),
+        url('ACaslonPro-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
