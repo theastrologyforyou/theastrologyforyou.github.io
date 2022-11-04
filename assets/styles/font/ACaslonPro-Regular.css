@@ -4,7 +4,7 @@
         url('ACaslonPro-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: optional; /* Shows the fallback font that you have set in the CSS until the web font has downloaded. Your website visitors may see a Flash of unstyled text  or FOUT with this option. */
+    font-display: swap; /* Shows the fallback font that you have set in the CSS until the web font has downloaded. Your website visitors may see a Flash of unstyled text  or FOUT with this option. */
 }
 
 @font-face {
@@ -13,5 +13,5 @@
         url('ACaslonPro-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
-    font-display: optional;
+    font-display: swap;
 }
