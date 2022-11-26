@@ -3381,7 +3381,7 @@ h2 {
   color: #000;
 }
 
-.astro-chart-widget #widget_containerA,
+.astro-chart-widget #widget_container,
 .astro-chart-widget .widget-container input,
 .astro-chart-widget .widget-container select,
 .astro-chart-widget .widget-container textarea,
@@ -3408,7 +3408,7 @@ h2 {
     font-size: 16px !important;
     line-height: 24px !important;
   }
-  .astro-chart-widget #widget_containerA,
+  .astro-chart-widget #widget_container,
 .astro-chart-widget .widget-container input,
 .astro-chart-widget .widget-container select,
 .astro-chart-widget .widget-container textarea,
@@ -3425,7 +3425,7 @@ h2 {
 
 .astro-chart-widget .widget-container.widget-birthchart .btn.btn-primary {
   display: block;
-  font-family: 'Adobe Caslon Pro';
+  font-family: 'Adobe Caslon Pro' !important;
   font-style: normal;
   font-weight: 400;
   font-size: 11px !important;
@@ -3433,6 +3433,18 @@ h2 {
   max-width: 200px;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+.en-AU .astro-chart-widget .widget-container .new-form .default-input.month,
+.en-NZ .astro-chart-widget .widget-container .new-form .default-input.month {
+  position: relative;
+  left: 90px;
+}
+
+.en-AU .astro-chart-widget .widget-container .new-form .default-input.day,
+.en-NZ .astro-chart-widget .widget-container .new-form .default-input.day {
+  position: relative;
+  left: -90px;
 }
 
 /* ==========================================================================
