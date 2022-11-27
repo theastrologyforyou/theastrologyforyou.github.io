@@ -3399,7 +3399,7 @@ h2 {
 }
 
 .astro-chart-widget .widget-container .radio input[type="radio"] {
-  padding-right: 0;
+  padding-right: 0 !important;
 }
 
 .astro-chart-widget .widget-container input::-moz-placeholder, .astro-chart-widget .widget-container select::-moz-placeholder, .astro-chart-widget .widget-container textarea::-moz-placeholder, .astro-chart-widget .date-group input::-moz-placeholder {
