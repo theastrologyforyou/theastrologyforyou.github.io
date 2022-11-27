@@ -509,8 +509,20 @@ figure svg {
     justify-content: end;
   }
   .navbar__wrapper {
-    height: 60px;
+    height: 100%;
+  }
+  .navbar__wrapper::after {
+    content: "";
+    position: absolute;
+    display: block;
     border-bottom: 1px solid #000;
+    height: 1px;
+    width: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-right: calc(var(--bs-gutter-x) * 1);
+    margin-left: calc(var(--bs-gutter-x) * 1);
   }
 }
 
@@ -521,7 +533,7 @@ figure svg {
 }
 
 @media only screen and (min-width: 992px) {
-  .homepage .navbar__wrapper {
+  .homepage .navbar__wrapper::after {
     border: 0;
   }
 }
@@ -542,8 +554,11 @@ figure svg {
 
 @media only screen and (min-width: 992px) {
   .navbar-brand__logo {
+    display: inline-block;
     width: 20px;
     height: 20px;
+    top: 6px;
+    margin-right: 16px;
   }
 }
 
@@ -551,29 +566,50 @@ figure svg {
   .navbar-brand__logo {
     width: 24px;
     height: 24px;
+    top: 3px;
+    margin-right: 24px;
   }
 }
 
 /* BRAND TITLE */
 .navbar-brand__title {
-  display: none;
+  display: inline-block;
+  font-family: 'Roslindale Variable Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-left: 1px;
 }
 
 @media only screen and (max-width: 991px) {
   .navbar-brand__title {
-    display: inline-block;
-    font-family: 'Roslindale Variable Display';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
     margin-left: 1px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar-brand__title {
+    position: relative;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .navbar-brand__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .homepage .navbar-brand__title {
+    display: none;
   }
 }
 
@@ -1033,7 +1069,6 @@ figure svg {
     padding-bottom: 6px;
   }
   .site-copyright__header {
-    display: inline-block;
     float: left;
     font-size: 12px;
     margin-right: 60px;
@@ -1359,7 +1394,7 @@ body {
 @media only screen and (max-width: 767px) {
   .home-hero {
     position: relative;
-    height: 670px;
+    height: 620px;
   }
   .home-hero__title {
     display: inline-block;
@@ -1377,7 +1412,7 @@ body {
     letter-spacing: 0.5px;
   }
   .home-hero__btn {
-    margin-top: 14px;
+    margin-top: 10px;
     margin-left: -2px;
   }
   .home-hero__btn_last {
@@ -1412,13 +1447,10 @@ body {
   .home-hero__copy {
     font-size: 24px;
     line-height: 28px;
-    max-width: 400px;
   }
   .home-hero__btn {
     margin-top: 24px;
-  }
-  .home-hero__btn_last {
-    margin-top: 8px;
+    margin-right: 5px;
   }
   .home-hero::after {
     height: 670px;
@@ -2049,7 +2081,6 @@ body {
     border-top: 1px solid #000;
   }
   .home-bookinfo__header, .home-bookinfo__textbox {
-    display: inline-block;
     width: 50%;
     max-width: 50%;
     float: left;
@@ -3350,6 +3381,10 @@ h2 {
   display: none;
 }
 
+.astro-chart-widget a#bc_astro::after {
+  display: none;
+}
+
 .astro-chart-widget #widget_container {
   border: 0 !important;
   padding: 0 !important;
@@ -3425,6 +3460,7 @@ h2 {
 
 .astro-chart-widget .widget-container.widget-birthchart .btn.btn-primary {
   display: block;
+  background-color: #000 !important;
   font-family: 'Adobe Caslon Pro' !important;
   font-style: normal;
   font-weight: 400;
@@ -3433,6 +3469,16 @@ h2 {
   max-width: 200px;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+.astro-chart-widget .widget-container.widget-birthchart .btn.btn-primary:hover {
+  background-color: #3D3D3D !important;
+}
+
+@media only screen and (min-width: 1600px) {
+  .astro-chart-widget .widget-container.widget-birthchart .btn.btn-primary {
+    font-size: 13px !important;
+  }
 }
 
 .en-AU .astro-chart-widget .widget-container .new-form .default-input.month,

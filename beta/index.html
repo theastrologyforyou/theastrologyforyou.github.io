@@ -21,8 +21,8 @@
   <link rel="shortcut icon" href="https://theastrologyofyou.com/beta/assets/brand/favicon.png">
 
   <!-- Style -->
-  <link rel="stylesheet" href="/beta/assets/styles/vendor/bootstrap.min.css?v=1669451176">
-  <link rel="stylesheet" href="/beta/assets/styles/style.css?v=1669451176">
+  <link rel="stylesheet" href="/beta/assets/styles/vendor/bootstrap.min.css?v=1669573814">
+  <link rel="stylesheet" href="/beta/assets/styles/style.css?v=1669573814">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EEZ17DGCX"></script>
@@ -112,7 +112,8 @@
         <div class="home-hero__copy">
           <p>A book that will change the way you think about astrology.</p>
           <a href="http://booktopia.kh4ffx.net/2rvEP0" class="home-hero__btn btn btn-secondary" target="_blank">Buy the book</a>
-          <a id="homeBannerTogglePopup" class="home-hero__btn home-hero__btn_last btn" href="#" data-bs-toggle="modal" data-bs-target="#worksheetsDownloadPopup">Download Worksheets</a>
+          <a id="homeBannerTogglePopup" class="home-hero__btn btn" href="#" data-bs-toggle="modal" data-bs-target="#worksheetsDownloadPopup">Download Worksheets</a>
+          <a class="home-hero__btn btn" href="/beta/cast-your-chart/">Cast your chart</a>
         </div>
       </div>
     </div>
@@ -348,7 +349,7 @@
   </div><!-- /.home-carousel__wrapper -->
 </section><!-- /.home-carousel -->
 
-<script src="/beta/assets/scripts/vendor/swiper-bundle.min.js?v=1669451176" type="text/javascript" charset="utf-8"></script>
+<script src="/beta/assets/scripts/vendor/swiper-bundle.min.js?v=1669573814" type="text/javascript" charset="utf-8"></script>
 
       </div><!-- /.content-wrapper -->
 
@@ -538,9 +539,9 @@
 </div>
 
   <!-- Vendor Scripts -->
-<script src="/beta/assets/scripts/vendor/bootstrap.min.js?v=1669451176" type="text/javascript" charset="utf-8"></script>
+<script src="/beta/assets/scripts/vendor/bootstrap.min.js?v=1669573814" type="text/javascript" charset="utf-8"></script>
 <script src="/beta/assets/scripts/vendor/aos.js" type="text/javascript" charset="utf-8"></script>
-<script src="/beta/assets/scripts/main.js?v=1669451176" type="text/javascript" charset="utf-8"></script>
+<script src="/beta/assets/scripts/main.js?v=1669573814" type="text/javascript" charset="utf-8"></script>
 
 
   <script
@@ -556,6 +557,60 @@
       $('#mainContainer').toggleClass('goLight');
     },0);
   },5000);
+
+  // Swiper Slider
+  const homeSwiper = new Swiper('.home-swiper', {
+    centeredSlides: true,
+    slidesPerView: 1.3,
+    spaceBetween: 0,
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // Responsive setting
+    breakpoints: {
+      414: {
+        slidesPerView: 1.4,
+        spaceBetween: 0,
+      },
+      576: {
+        slidesPerView: 1.8,
+        spaceBetween: 0,
+      },
+      768: {
+        slidesPerView: 1.3,
+        spaceBetween: 0,
+      },
+      1024: {
+        slidesPerView: 1.5,
+        spaceBetween: 0,
+      },
+      1200: {
+        slidesPerView: 1.5,
+        spaceBetween: -180,
+      },
+      1400: {
+        slidesPerView: 1.5,
+        spaceBetween: -320,
+      },
+      1600: {
+        slidesPerView: 1.5,
+        spaceBetween: -200,
+      },
+      1800: {
+        slidesPerView: 1.5,
+        spaceBetween: -303,
+      },
+      2300: {
+        slidesPerView: 1.5,
+        spaceBetween: -520,
+      },
+    },
+  });
   </script>
 
 </body>
