@@ -3398,6 +3398,10 @@ h2 {
   height: 45px !important;
 }
 
+.astro-chart-widget .widget-container .radio input[type="radio"] {
+  padding-right: 0;
+}
+
 .astro-chart-widget .widget-container input::-moz-placeholder, .astro-chart-widget .widget-container select::-moz-placeholder, .astro-chart-widget .widget-container textarea::-moz-placeholder, .astro-chart-widget .date-group input::-moz-placeholder {
   font-family: 'Adobe Caslon Pro' !important;
   font-style: normal;
