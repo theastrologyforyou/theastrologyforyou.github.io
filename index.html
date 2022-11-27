@@ -119,6 +119,7 @@
                 book</a>
               <a id="togglePopup" class="landing__btn landing__btn__worksheets btn btn-inverted"
                 href="#worksheets">Download Worksheets</a>
+              <a id="togglePopup2" class="landing__btn landing__btn__worksheets btn btn-inverted" href="#castyourchart" data-modal="castYourChart">Cast your chart</a>
             </div>
           </div><!-- /.box2 -->
 
@@ -182,23 +183,59 @@
     </div><!-- /.modal -->
 
 
+    <div class="cast-your-chart__popup popup" id="castYourChart">
+      <div class="popup-dialog">
+        <div class="popup-content">
+          <h2>Cast Your Chart</h2>
+          <p>The first step to understanding your birth chart is to cast it! In the not-too-distant past, a professional astrologerwould have calculated it by hand in painstaking detail. Now it’s as simple as plugging your birth data into the fields below and voila! All you need is your date of birth, your time of birth and your location of birth.</p>
+          <div class="astro-chart-widget">
+            <div id="widget_container"><a id="bc_astro" href="https://astro-charts.com"></a></div>
+            <script type="text/javascript"
+              src="https://astro-charts.com/client/common/widget/js/widget-birthchart.min.js" defer></script>
+          </div>
+          <div class="close-popup">
+            <a class="popup-close popup-exit" href="#main">Back</a>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.modal -->
+
+
 
   </div><!-- /.master-wrap -->
 
 
-
-  <!-- Popup -->
   <script>
-    var toggleButton = document.querySelector('#togglePopup');
-    var toggleCloseButton = document.querySelector('#ClosePopup');
-    var toggleDiv = document.querySelector('#wrap');
+    var toggleButton = document.querySelector("#togglePopup");
+    var toggleCloseButton = document.querySelector("#ClosePopup");
+    var toggleDiv = document.querySelector("#wrap");
 
     toggleButton.onclick = function () {
-      toggleDiv.classList.toggle('open');
-    }
+      toggleDiv.classList.toggle("open");
+    };
     toggleCloseButton.onclick = function () {
-      toggleDiv.classList.toggle('open');
-    }
+      toggleDiv.classList.toggle("open");
+    };
+
+    const modals = document.querySelectorAll('[data-modal]');
+    modals.forEach(function (trigger) {
+      trigger.addEventListener('click', function (event) {
+        event.preventDefault();
+        const modal = document.getElementById(trigger.dataset.modal);
+        modal.classList.add('open');
+        const exits = modal.querySelectorAll('.popup-exit');
+        exits.forEach(function (exit) {
+          exit.addEventListener('click', function (event) {
+            event.preventDefault();
+            modal.classList.remove('open');
+          });
+        });
+      });
+    });
+
+    let userLocale = navigator.language;
+    let body = document.body;
+    body.classList.add(userLocale);
   </script>
 
 
