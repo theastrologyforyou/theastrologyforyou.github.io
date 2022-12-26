@@ -21,8 +21,8 @@
   <link rel="shortcut icon" href="https://theastrologyofyou.com/assets/brand/favicon.png">
 
   <!-- Style -->
-  <link rel="stylesheet" href="/assets/styles/vendor/bootstrap.min.css?v=1669859111">
-  <link rel="stylesheet" href="/assets/styles/style.css?v=1669859111">
+  <link rel="stylesheet" href="/assets/styles/vendor/bootstrap.min.css?v=1672016518">
+  <link rel="stylesheet" href="/assets/styles/style.css?v=1672016518">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EEZ17DGCX"></script>
@@ -143,10 +143,11 @@
       </div>
 
       <div class="astro-chart-widget">
-        <div id="widget_container"><a id="bc_astro" href="https://astro-charts.com"></a></div>
-        <script type="text/javascript"
-          src="https://astro-charts.com/client/common/widget/js/widget-birthchart.min.js" defer></script>
-      </div>
+
+        <div id="widget_container"><div><h2 id="bc_astro"> Explore your free birth chart with the <a target="_blank" href="https://astro-charts.com/tools/new/birth-chart/"> birth chart calculator </a>. </h2> </div> </div> <script type="text/javascript" src="https://astro-charts.com/client/common/widget/js/widget-birthchart.min.js"></script>
+
+      </div><!-- astro-chart-widget -->
+
     </div>
   </div>
 
@@ -193,6 +194,23 @@
   body.classList.add(userLocale);
 </script>
 
+
+<style>
+#bc_astro {
+  /* font-size: 0px !important; */
+  height: 0;
+  overflow: hidden;
+}
+.widget-container .new_box {
+  background-color: #F5F4ED;
+}
+.widget-container div {
+  background-color: #F5F4ED;
+}
+#widget_container > :first-child {
+  margin-bottom: 0;
+}
+</style>
 
     </main><!-- /#main -->
     <footer class="site-footer" data-aos>
@@ -383,9 +401,9 @@
 </div>
 
   <!-- Vendor Scripts -->
-<script src="/assets/scripts/vendor/bootstrap.min.js?v=1669859111" type="text/javascript" charset="utf-8"></script>
+<script src="/assets/scripts/vendor/bootstrap.min.js?v=1672016518" type="text/javascript" charset="utf-8"></script>
 <script src="/assets/scripts/vendor/aos.js" type="text/javascript" charset="utf-8"></script>
-<script src="/assets/scripts/main.js?v=1669859111" type="text/javascript" charset="utf-8"></script>
+<script src="/assets/scripts/main.js?v=1672016518" type="text/javascript" charset="utf-8"></script>
 
 
 </body>
