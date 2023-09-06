@@ -560,6 +560,13 @@
   </div>
 </div>
 
+<script>
+  // Detect user locale and add classname
+  let userLocale = navigator.language;
+  let body = document.body;
+  body.classList.add(userLocale);
+</script>
+
   <!-- Vendor Scripts -->
 <script src="/assets/scripts/vendor/bootstrap.min.js?v=1669859111" type="text/javascript" charset="utf-8"></script>
 <script src="/assets/scripts/vendor/aos.js" type="text/javascript" charset="utf-8"></script>
