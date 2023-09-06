@@ -131,7 +131,8 @@
         <div class="home-hero__copy">
           <p>A book that will change the way you think about astrology.</p>
           <a href="http://booktopia.kh4ffx.net/2rvEP0" class="home-hero__btn btn btn-secondary" target="_blank">Buy the book</a>
-          <a id="homeBannerTogglePopup" class="home-hero__btn btn" href="/worksheets/">Download Worksheets</a>
+          <a id="homeBannerTogglePopup" class="home-hero__btn home-hero__btn_en btn" href="/worksheets/">Download Worksheets</a>
+          <a class="home-hero__btn home-hero__btn_sv btn" href="/swedishworksheets/">Hämta arbetsblad</a>
           <a class="home-hero__btn btn" href="/cast-your-chart/">Cast your chart</a>
         </div>
       </div>
@@ -566,6 +567,15 @@
   let body = document.body;
   body.classList.add(userLocale);
 </script>
+
+<style>
+.home-hero__btn_sv {
+  display: none;
+}
+.homepage.sv .home-hero__btn_sv {
+  display: block;
+}
+</style>
 
   <!-- Vendor Scripts -->
 <script src="/assets/scripts/vendor/bootstrap.min.js?v=1669859111" type="text/javascript" charset="utf-8"></script>
